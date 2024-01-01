@@ -1,0 +1,6 @@
+name,type
+index,bigint
+N_NATIONKEY,bigint
+N_REGIONKEY,bigint
+N_NAME,text
+N_COMMENT,text

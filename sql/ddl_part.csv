@@ -1,0 +1,11 @@
+name,type
+P_SIZE,bigint
+P_PARTKEY,bigint
+P_RETAILPRICE,double precision
+index,bigint
+P_TYPE,text
+P_CONTAINER,text
+P_COMMENT,text
+P_NAME,text
+P_MFGR,text
+P_BRAND,text

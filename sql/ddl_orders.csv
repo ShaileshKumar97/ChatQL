@@ -1,0 +1,11 @@
+name,type
+O_CUSTKEY,bigint
+O_ORDERKEY,bigint
+O_TOTALPRICE,double precision
+O_SHIPPRIORITY,bigint
+index,bigint
+O_COMMENT,text
+O_ORDERSTATUS,text
+O_ORDERDATE,text
+O_ORDERPRIORITY,text
+O_CLERK,text

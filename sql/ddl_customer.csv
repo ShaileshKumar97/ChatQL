@@ -1,0 +1,10 @@
+name,type
+index,bigint
+C_CUSTKEY,bigint
+C_NATIONKEY,bigint
+C_ACCTBAL,double precision
+C_MKTSEGMENT,text
+C_PHONE,text
+C_COMMENT,text
+C_NAME,text
+C_ADDRESS,text

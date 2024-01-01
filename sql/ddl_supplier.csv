@@ -1,0 +1,9 @@
+name,type
+index,bigint
+S_SUPPKEY,bigint
+S_NATIONKEY,bigint
+S_ACCTBAL,double precision
+S_COMMENT,text
+S_PHONE,text
+S_NAME,text
+S_ADDRESS,text

@@ -1,0 +1,7 @@
+name,type
+index,bigint
+PS_PARTKEY,bigint
+PS_SUPPKEY,bigint
+PS_AVAILQTY,bigint
+PS_SUPPLYCOST,double precision
+PS_COMMENT,text

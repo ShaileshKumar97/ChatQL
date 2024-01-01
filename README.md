@@ -1,18 +1,33 @@
-# ChatQL
-ChatQL: Querying Databases Through Conversation with Power of LLMs
+# ChatQL 💬
 
-This application is combination of techniques in Natuaral Language Processing, for eg. [Retrieval Augmented Generation (RAG)](https://arxiv.org/abs/2005.11401).
+**ChatQL** is an intuitive and user-friendly application that allows users to interact with their SQL database using natural language queries. Type in your questions or requests, and ChatQL will generate the appropriate SQL query and return the data you need. No more complex SQL queries or digging through tables - ChatQL makes it easy to access your data! By bringing data one step closer, ChatQL empowers users to make data-driven decisions faster and more efficiently, reducing the barriers between users and the insights they seek.
 
-## What is RAG
-Retrieval-Augmented Generation allows language models to tap into external data sources, such as enterprise document repositories or databases. This ensures that responses are up-to-date and reflect the unique business rules of the specific domain.
+## 🌟 Features
 
-## How it Works?
-It first takes an input question and retrieves relevant documents to it from an external database with the help of Vector Stores (eg. Milvus, FAISS etc.). Then, it passes those chunks as a context in a prompt to help an LLM generate an augmented answer.
+- Interactive and user-friendly interface
+- Integration with Snowflake Data Warehouse
+- Utilizes OpenAI's GPT-4 and text-embedding-ada-002
+- Uses In-memory Vector Database FAISS for storing and searching through vectors
 
-## Steps involved in RAG Pipeline: with application steps
-- Loaders to parse external data in different formats: PDFs, websites, Doc files, etc. (in this application: Database Schema).
-- Splitters to chunk the raw data into smaller pieces of text
-- An embedding model to convert the chunks into vectors (Sentence Transformer)
-- A vector database to store the vectors and query them (FAISS, as it takes a small memory to operate compared to milvus which used in enterprise grade apps)
-- A prompt to combine the question and the retrieved documents
-- An LLM to generate the answer (OpenAI's GPT-3.5-turbo (API key required))
+## 🛠️ Installation
+
+1. Install the required packages:
+    ```
+    pip install -r requirements.txt
+    ```
+
+2. Set up your `OPENAI_API_KEY`, Snowflake `ACCOUNT`, `USER_NAME`, `PASSWORD`, `ROLE`, `DATABASE`, `SCHEMA` and `WAREHOUSE` in project directory `secrets.toml`. If you don't have access to GPT-4 change the script in chain.py replace gpt-4 in model_name to gpt-3.5-turbo
+
+3. Make you're schema.md that matches you're database.
+
+4. Run `python /embeddings/faiss.py` to get convert to embeddings and store as an index file.
+
+5. Run the Streamlit app to start chatting:
+   streamlit run app.py
+
+## 📚 Usage
+
+1. Launch the app by visiting the URL provided by Streamlit.
+2. Type your query in natural language or SQL format in the input box.
+3. Press "Submit" to generate the response.
+4. The chatbot will generate a response based on your query and display the result, including any relevant data or SQL code.

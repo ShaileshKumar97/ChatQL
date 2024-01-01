@@ -1,0 +1,5 @@
+name,type
+index,bigint
+R_REGIONKEY,bigint
+R_NAME,text
+R_COMMENT,text
