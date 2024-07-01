@@ -5,7 +5,7 @@
 ## 🌟 Features
 
 - Interactive and user-friendly interface
-- Integration with Snowflake Data Warehouse
+- Integration with PostgreSQL and Snowflake Data Warehouse
 - Utilizes OpenAI's GPT-4 and text-embedding-ada-002
 - Uses In-memory Vector Database FAISS for storing and searching through vectors
 
@@ -15,19 +15,16 @@
     ```
     pip install -r requirements.txt
     ```
-
-2. Set up your `OPENAI_API_KEY`, Snowflake `ACCOUNT`, `USER_NAME`, `PASSWORD`, `ROLE`, `DATABASE`, `SCHEMA` and `WAREHOUSE` in project directory `secrets.toml`. If you don't have access to GPT-4 change the script in chain.py replace gpt-4 in model_name to gpt-3.5-turbo
-
-3. Make you're schema.md that matches you're database.
-
-4. Run `python /embeddings/faiss.py` to get convert to embeddings and store as an index file.
-
-5. Run the Streamlit app to start chatting:
+2. Run the Streamlit app to start chatting:
+   ```
    streamlit run app.py
+   ```
+3. Select your database from dropdown and enter required credentials like Set up your `OPENAI_API_KEY`, PostgreSQL's `HOST`, `PORT`, `DATABASE`, `USERNAME`, `PASSWORD` and `SCHEMA` or Snowflake's `ACCOUNT`, `USER_NAME`, `PASSWORD`, `ROLE`, `DATABASE`, `SCHEMA` and `WAREHOUSE`. If you don't have access to GPT-4 change the script in chain.py replace gpt-4 in model_name to gpt-3.5-turbo.
+4. And submit, It will now generate the schema of tables from database and store into a md file.
+5. Now chat with your data.
 
 ## 📚 Usage
 
 1. Launch the app by visiting the URL provided by Streamlit.
-2. Type your query in natural language or SQL format in the input box.
-3. Press "Submit" to generate the response.
-4. The chatbot will generate a response based on your query and display the result, including any relevant data or SQL code.
+2. Type your query in natural language or SQL format in the input box and enter to generate the response.
+3. The chatbot will generate a response based on your query and display the result, including any relevant data or SQL code.
